@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,38 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gray-200 text-gray-800">
-  <header class="bg-[#2c3e50] text-white fixed top-0 left-0 w-full z-50 shadow-md flex justify-between items-center px-10 py-9">
-      <h1 class="text-xl font-extrabold tracking-widest drop-shadow-lg">SISTEMA DE GESTÃO</h1>
+  <header
+    class="bg-[#2c3e50] text-white fixed top-0 left-0 w-full z-50 shadow-md flex justify-between items-center px-10 py-9">
+    <h1 class="text-xl font-extrabold tracking-widest drop-shadow-lg">SISTEMA DE GESTÃO</h1>
     <nav>
       <ul class="flex gap-6">
         <li>
-          <a href="#" class="hover:bg-[#34495e] px-4 py-2 rounded-md transition" onclick="carregarPagina('dashboard')">Dashboard</a>
+          <a href="#" class="hover:bg-[#34495e] px-4 py-2 rounded-md transition"
+            onclick="carregarPagina('dashboard')">Dashboard</a>
         </li>
         <li>
-          <a href="#" class="hover:bg-[#34495e] px-4 py-2 rounded-md transition" onclick="carregarPagina('entregas')">Entregas</a>
+          <a href="#" class="hover:bg-[#34495e] px-4 py-2 rounded-md transition"
+            onclick="carregarPagina('entregas')">Entregas</a>
         </li>
         <li>
-          <a href="#" class="hover:bg-[#34495e] px-4 py-2 rounded-md transition" onclick="carregarPagina('entradas')">Entradas</a>
+          <a href="#" class="hover:bg-[#34495e] px-4 py-2 rounded-md transition"
+            onclick="carregarPagina('entradas')">Entradas</a>
         </li>
         <li>
-          <a href="#" class="hover:bg-[#34495e] px-4 py-2 rounded-md transition" onclick="carregarPagina('funcionarios')">Funcionários</a>
+          <a href="#" class="hover:bg-[#34495e] px-4 py-2 rounded-md transition"
+            onclick="carregarPagina('funcionarios')">Funcionários</a>
         </li>
         <li>
-          <a href="#" class="hover:bg-[#34495e] px-4 py-2 rounded-md transition" onclick="carregarPagina('estoque')">Estoque</a>
+          <a href="#" class="hover:bg-[#34495e] px-4 py-2 rounded-md transition"
+            onclick="carregarPagina('estoque')">Estoque</a>
         </li>
-        
+
         <li>
           <!-- login.html vai direcionar a página de login -->
-          <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition" onclick="alert('Você saiu do sistema!')">Sair</a>
+          <a href="login.html" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition"
+            onclick="alert('Você saiu do sistema!')">Sair</a>
         </li>
       </ul>
     </nav>
@@ -38,12 +47,12 @@
 
   <main id="conteudo" class="mt-24 p-6">
     <!-- conteúdo do dashboard padrão -->
-   <h1 class="text-3xl font-extrabold text-gray-800 mb-6 flex items-center gap-3">
+    <h1 class="text-3xl font-extrabold text-gray-800 mb-6 flex items-center gap-3">
       <span class="text-[#2c3e50]">📊</span>
-        Painel de Controle
+      Painel de Controle
     </h1>
 
-    
+
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
       <!-- Tabela -->
@@ -63,13 +72,13 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100">
-              <tr class="hover:bg-gray-50 transition">
-                <td class="p-3">Capacete de Segurança</td>
-                <td class="p-3">3M</td>
-                <td class="p-3">43.294</td>
-                <td class="p-3">12/2025</td>
-                <td class="p-3 text-green-600 font-semibold">OK</td>
-              </tr>
+            <tr class="hover:bg-gray-50 transition">
+              <td class="p-3">Capacete de Segurança</td>
+              <td class="p-3">3M</td>
+              <td class="p-3">43.294</td>
+              <td class="p-3">12/2025</td>
+              <td class="p-3 text-green-600 font-semibold">OK</td>
+            </tr>
             <tr class="hover:bg-gray-50 transition">
               <td class="p-3">Capacete de Segurança 2</td>
               <td class="p-3">3M</td>
@@ -80,12 +89,12 @@
           </tbody>
         </table>
 
-       </section>
+      </section>
 
-       <section class="flex flex-col gap-6">
+      <section class="flex flex-col gap-6">
         <section class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
           <h3 class="text-lg font-bold text-gray-800 mb-3">
-           ⚠️ ALERTAS IMPORTANTES ⚠️
+            ⚠️ ALERTAS IMPORTANTES ⚠️
           </h3>
           <ul class="space-y-2 text-sm">
             <li class="flex items-center gap-2 text-red-600">
@@ -120,56 +129,153 @@
             AÇÕES RÁPIDAS
           </h3>
           <div class="flex flex-col gap-3">
-
-            <button class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md" 
+            <button class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md"
               onclick="abrirFormulario()">
               ➕ Registrar Nova Entrada
             </button>
 
-            <!-- Modal do formulário -->
-            <div id="formularioModal"
-                class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 transition-opacity duration-500 opacity-0">
-                  <div class="bg-white p-4 rounded-lg w-full max-w-md z-10 relative">
+            <!-- Modal do formulário registrar nova entrada-->
+            <div id="modalEntrada"
+              class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 transition-opacity duration-500 opacity-0">
+              <div class="bg-white p-4 rounded-lg w-full max-w-md z-10 relative">
 
                 <h2 class="text-lg font-bold mb-3">
                   Registrar Nova Entrada
                 </h2>
 
-                  <form id="entradaForm" class="flex flex-col gap-3">
-                    <input id="item" type="text" class="border rounded-md p-2" placeholder="Item">
-                    <input id="quantidade" type="number" class="border rounded-md p-2" placeholder="Quantidade">
-                    <input id="validade" type="text" class="border rounded-md p-2" placeholder="AAAA-MM">
-                    
-                    <div class="flex justify-end gap-2">
-                      <button type="button" class="bg-gray-300 px-3 py-2 rounded-md" onclick="fecharFormulario()">
-                        Cancelar
-                      </button>
-                      <button type="button" class="bg-green-600 text-white px-3 py-2 rounded-md"
+                <form id="entradaForm" class="flex flex-col gap-3">
+                  <input id="item" type="text" data-tipo="texto" class="border rounded-md p-2" placeholder="Item">
+                  <input id="quantidade" type="number" class="border rounded-md p-2" placeholder="Quantidade">
+                  <label for="validade" class="text-sm font-semibold text-gray-700">Data de Validade</label>
+                  <input id="validade" type="month"
+                    class="border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#2c3e50] focus:outline-none transition duration-200 cursor-pointer"
+                    required>
+
+
+                  <div class="flex justify-end gap-2">
+                    <button type="button" class="bg-gray-300 px-3 py-2 rounded-md" onclick="fecharFormulario()">
+                      Cancelar
+                    </button>
+                    <button type="button" class="bg-green-600 text-white px-3 py-2 rounded-md"
                       onclick="salvarEntrada()"> Salvar
-                      </button>
-                    </div>
-                  </form>
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
 
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md flex items-center justify-center gap-2">
+            <!-- Botão para abrir o modal -->
+            <button
+              class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md flex items-center justify-center gap-2"
+              onclick="abrirModalEntrega()">
               ✋ Realizar Entrega/Baixa
             </button>
-            <button class="bg-yellow-600 hover:bg-yellow-500 text-gray-800 font-semibold py-2 px-4 rounded-md flex items-center justify-center gap-2">
+
+            <!-- Modal de Entrega -->
+            <div id="modalEntrega"
+              class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 transition-opacity duration-500 opacity-0">
+              <div
+                class="bg-white p-6 rounded-lg w-full max-w-md z-10 relative shadow-xl transform scale-95 transition-transform duration-300">
+                <h2 class="text-lg font-bold mb-3 text-gray-800">
+                  Realizar Entrega / Baixa
+                </h2>
+
+                <form id="entregaForm" class="flex flex-col gap-3">
+                  <input id="itemEntrega" type="text" data-tipo="texto" class="border rounded-md p-2"
+                    placeholder="Item Entregue" required />
+                  <label class="text-sm font-semibold text-gray-700">
+                    Data de Vencimento
+                  </label>
+                  <input id="validadeEntrega" type="month"
+                    class="border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#2c3e50] focus:outline-none transition duration-200 cursor-pointer"
+                    required />
+
+                  <input id="quantidadeEntrega" type="number" class="border rounded-md p-2"
+                    placeholder="Quantidade Entregue" min="1" required />
+
+                  <input id="funcionarioEntrega" type="text" data-tipo="texto" class="border rounded-md p-2"
+                    placeholder="Nome do Funcionário" required />
+
+                  <div class="flex justify-end gap-2 mt-2">
+                    <button type="button" class="bg-gray-300 hover:bg-gray-400 px-3 py-2 rounded-md"
+                      onclick="fecharModalEntrega()">
+                      Cancelar
+                    </button>
+
+                    <button type="button" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md"
+                      onclick="salvarEntrega()">
+                      Salvar
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!--  Botão do formulário Buscar CA/EPI-->
+            <button
+              class="bg-yellow-600 hover:bg-yellow-500 text-gray-800 font-semibold py-2 px-4 rounded-md flex items-center justify-center gap-2"
+              onclick="abrirModalBusca()">
               🔍 Buscar CA/EPI
             </button>
+
+            <!-- Modal do formulário Buscar CA/EPI-->
+
+            <div id="modalBusca"
+              class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 transition-opacity duration-500 opacity-0">
+              <div
+                class="bg-white p-6 rounded-lg w-full max-w-md relative shadow-xl transform scale-95 transition-transform duration-300">
+                <h2 class="text-lg font-bold mb-3 text-gray-800">
+                  Buscar CA/EPI
+                </h2>
+
+                <form id="buscarForm" class="flex flex-col gap-3">
+                  <input id="buscarInput" type="text" data-tipo="texto" class="border rounded-md p-2"
+                    placeholder="Digite o nome do EPI ou do número do CA" required />
+                  <div class="flex justify-end gap-2 mt-2">
+                    <button type="button" class="bg-gray-300 hover:bg-gray-400 px-3 py-2 rounded-md"
+                      onclick="fecharModalBusca()">
+                      Cancelar
+                    </button>
+                    <button type="button"
+                      class="bg-yellow-600 hover:bg-yellow-700 px-3 py-2 rounded-md flex items-center gap-2"
+                      onclick="buscarEPI()">
+                      <span id="iconeBusca">
+                        🔍
+                      </span>
+                      <span id="textoBusca">
+                        Buscar
+                      </span>
+                    </button>
+                  </div>
+                </form>
+
+                <!-- Resultados -->
+
+                <div id="resultadoBusca" class="mt-4 hidden">
+                  <h3 class="font-semibold text-gray-700 mb-2">
+                    Resultado:
+                  </h3>
+                  <div id="resultadoConteudo" class="text-sm text-gray-600">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </section>
-       </section>
+      </section>
     </div>
   </main>
 
   <!-- Toast -->
-  <div id="toast" class="hidden fixed top-5 right-5 bg-green-600 text-white px-4 py-2 rounded-md shadow-lg opacity-0 transition-opacity duration-500 z-50">
+  <div id="toast"
+    class="hidden fixed top-5 right-5 bg-green-600 text-white px-4 py-2 rounded-md shadow-lg opacity-0 transition-opacity duration-500 z-50">
     ✅ Entrada registrada com sucesso!
   </div>
 
-  
+
   <script src="script.js" defer></script>
 </body>
+
 </html>
